@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>planet site</title>
+
+
+<style>
+body {
+margin: 0;
+height: 100vh;
+background: linear-gradient(to bottom,
+rgba(180, 195, 210, 0.4),
+rgba(150, 170, 190, 0.6),
+rgba(180, 195, 210, 0.4)
+);
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+font-family: "Helvetica Neue", "Noto Sans JP", sans-serif;
+}
+
+h1 {
+font-size: 3rem;
+font-weight: 300;
+color: rgba(255, 255, 255, 0.9);
+letter-spacing: 0.4em;
+opacity: 0;
+animation: fadeIn 3s ease forwards, tighten 4s ease forwards 1s;
+}
+
+@keyframes fadeIn {
+to { opacity: 1; }
+}
+
+@keyframes tighten {
+to { letter-spacing: 0.05em; }
+}
+
+a {
+  text-decoration: none !important;   /* 強制的に下線を消す */
+  color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+</style>
+</head>
+<body>
+<a href="worldview.html">
+  <h1>planet site</h1>
+</a>
+</body>
+</html>
