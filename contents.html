@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>planet index</title>
+
+<style>
+body {
+margin: 0;
+height: 100vh;
+background: linear-gradient(to bottom,
+rgba(180, 195, 210, 0.4),
+rgba(150, 170, 190, 0.6),
+rgba(180, 195, 210, 0.4)
+);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+font-family: "Helvetica Neue", "Noto Sans JP", sans-serif;
+color: rgba(255, 255, 255, 0.9);
+}
+
+h1 {
+font-size: 3rem;
+font-weight: 300;
+letter-spacing: 0.4em;
+opacity: 0;
+animation: fadeIn 3s ease forwards, tighten 4s ease forwards 1s;
+margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+to { opacity: 1; }
+}
+
+@keyframes tighten {
+to { letter-spacing: 0.05em; }
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+
+li {
+margin: 1rem 0;
+font-size: 1.2rem;
+opacity: 0;
+animation: fadeInList 2s ease forwards;
+}
+
+li:nth-child(1) { animation-delay: 1.5s; }
+li:nth-child(2) { animation-delay: 2s; }
+li:nth-child(3) { animation-delay: 2.5s; }
+li:nth-child(4) { animation-delay: 3s; }
+li:nth-child(5) { animation-delay: 3.5s; }
+
+@keyframes fadeInList {
+to { opacity: 1; }
+}
+
+a {
+text-decoration: none !important;
+color: rgba(255, 255, 255, 0.9);
+transition: opacity 0.3s ease;
+}
+
+a:hover {
+opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+<h1>planet index</h1>
+<ul>
+  <li><a href="worldview.html">世界観</a></li>
+  <li><a href="characters.html">登場人物</a></li>
+  <li><a href="novel.html">序章</a></li>
+  <li><a href="novel1.html">予祝祭</a></li>
+  <li><a href="contact.html">イラスト</a></li>
+</ul>
+</body>
+</html>
