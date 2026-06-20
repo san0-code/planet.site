@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: '游明朝', serif;
+  color: #eaeaea;
+  background: linear-gradient(to bottom, #111, #444);
+  overflow-x: hidden;
+}
+
+.fog-layer {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('fog.png') center/cover no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: fogMove 60s linear infinite;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+@keyframes fogMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100px); }
+}
+
+.container {
+  max-width: 700px;
+  margin: 10vh auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.intro, .line, .scene, .pause, .invitation {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.intro { animation-delay: 0.5s; }
+.line { animation-delay: 1.5s; }
+.scene { animation-delay: 2.5s; }
+.pause { animation-delay: 3.5s; }
+.invitation { animation-delay: 4.5s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.keys {
+  margin-top: 3rem;
+}
+
+.key-button {
+  background: transparent;
+  border: 1px solid #888;
+  color: #eaeaea;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.key-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: 0;
+}
+
+.key-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.key-button:hover {
+  color: #fff;
+  border-color: #ccc;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('sorea.jpg') center top / cover no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+<a href="灯の部屋.html" style="font-size:0.9em; color:#888; text-decoration:underline; margin-right:1em;">灯の部屋の鍵を受け取る</a>
+<a href="粒子の部屋.html" style="font-size:0.9em; color:#888; text-decoration:underline;">粒子の鍵を受け取る</a>
+
+
+/* スマホ最適化：全体 */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 1.05rem; /* 明朝体が潰れない最適値 */
+    line-height: 2.2;
+  }
+
+  .container {
+    max-width: 92%;      /* 画面幅に自然にフィット */
+    margin: 6vh auto;    /* 上下の余白を少し減らす */
+    padding: 1.5rem;     /* 読みやすい余白 */
+  }
+
+  .title {
+    font-size: 1.8rem;   /* スマホでは少し控えめに */
+    letter-spacing: 0.08em;
+  }
+
+  .intro, .line, .scene, .pause, .invitation {
+    font-size: 1.1rem;   /* 本文の最適値 */
+    line-height: 2.3;
+  }
+
+  /* 背景の fog を軽くする */
+  .fog-layer {
+    opacity: 0.15;
+    background-size: cover;
+  }
+
+  /* 背景画像の透明度も少し下げる */
+  body::after {
+    opacity: 0.05;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    line-height: 2.45;
+  }
+}
+
+body {
+  position: relative;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+/* 背景画像レイヤー（最も下） */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('sorea.jpg') center center / cover no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -2; /* ← ここが重要 */
+}
+
+background: url('sorea.jpg') center top / contain no-repeat;
+
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 700px;
+  padding: 10vh 2rem;
+  text-align: center;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Planet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1 class="planet-title">Planet</h1>
+<p>ただ、おのれの任務を全うする。<br>それだけ<!--<br>She didn’t chase the world.<br> She let it come to her...--!></p>
+</header>
+
+<img id="planet" src="Copilot_20251013_095056.png" alt="美しい惑星">
+
+
+
+
+<section id="elyun">
+<h2>planetの守護者 -斥候の役割を持つ黒い羽根の天使</h2>
+<img src="planet斥候.png" alt="pnalet斥候"><!--
+<p>She didn’t chase the world.<br>She let it come to her, one quiet moment at a time.</p>
+</section>
+
+<section id="anne">
+<h2>Anne — 金色の草原</h2>
+<img src="2B9299D4-D4A9-45FD-B881-4A5546FA409E.JPG" alt="草原のアン">
+<p>She walks where silence gathers leaves,<br>unnoticed,but never unseen.</p>
+</section>
+
+<section id="her">
+<h2>歩道の彼女</h2>
+<img src="IMG_3427.PNG" alt="歩道の彼女">
+<p>Her freckled smile stretched wider than the sky,<br>calling stories not yet written.</p>
+</section>
+
+
+
+<section id="series">
+<h3>シリーズ構成</h3>
+<ul>
+<li>窓辺のエリュン</li>
+<li>草原のアン</li>
+<li>歩道の彼女</li>
+</ul>
+<p class="tags">#静かな強さ #詩的な瞬間 #非商業系 #ElyunWorld</p>
+</section>
+
+<section id="star-map">
+<h2>Planet 星図</h2>
+<div class="stars">
+<a href="#elyun" class="star elyun">Elyun</a>
+<a href="#anne" class="star anne">Anne</a>
+<a href="#her" class="star her">歩道の彼女</a>
+<a href="#solea" class="star solea">Solea</a>
+<a href="#lily" class="star lily">Lily</a>
+<a href="#levia" class="star levia">Lévia</a>
+
+</div>
+</section>
+
+
+<section id="navigation">
+<h2>滞在の形</h2>
+<a href="support.html" class="nav-link">Support</a><br><br>
+<a href="shop.html" class="nav-link">Purchase</a><br><br>
+<a href="about.html" class="nav-link">About Planet</a>
+</section>
+<footer>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const planet = document.getElementById('planet');
+    const offset = scrollY * 0.05; // 揺れの強さ（調整可）
+    planet.style.transform = `translateY(${offset}px)`;
+  });
+
+function createFloatingStar() {
+  const star = document.createElement('div');
+  star.className = 'floating-star';
+  star.style.left = Math.random() * window.innerWidth + 'px';
+  star.style.top = window.innerHeight + 'px';
+  star.style.animationDuration = (4 + Math.random() * 3) + 's';
+  document.getElementById('floating-stars').appendChild(star);
+
+  setTimeout(() => {
+    star.remove();
+  }, 7000);
+}
+
+setInterval(createFloatingStar, 1000); // ゆっくり舞わせる
+
+
+
+
+
+const colors = ['#ffffff', '#88bbff', '#ffddcc', '#ffeeaa'];
+const glow = ['#88bbff', '#ffccaa', '#ddccff', '#ffeeaa'];
+
+const i = Math.floor(Math.random() * colors.length);
+star.style.background = `radial-gradient(circle, ${colors[i]} 0%, transparent 100%)`;
+star.style.boxShadow = `0 0 16px ${glow[i]}`;
+
+
+
+
+
+
+
+</script>
+
+
+
+<div id="floating-stars"></div>--!>
+
+
+</body>
+</html>
